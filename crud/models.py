@@ -13,3 +13,9 @@ class Leads(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Image(models.Model):
+
+    caption = models.CharField(max_length=40)
+    photo = models.ImageField(upload_to='img/')

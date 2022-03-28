@@ -3,9 +3,20 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.core.paginator import Paginator
 from .forms import LeadsForm
-from .models import Leads
+from .models import Leads, Image
 from django.template.loader import render_to_string
 # Create your views here.
+
+
+def image(request):
+
+    images = Image.objects.all()
+    
+    context = {
+        'images': images
+    }
+    
+    return render(request, 'image.html', context)
 
 def index(request):
     leads = Leads.objects.all().order_by('-id')

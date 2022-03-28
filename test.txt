@@ -1,0 +1,10 @@
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'nimutest2020',
+    'API_KEY': '922572428639368',
+    'API_SECRET': '9KIX5YQnQciyGxuL_vYTGx2PxCQ'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+django-cloudinary-storage==0.3.0
